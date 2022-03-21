@@ -1,0 +1,7 @@
+*.swp
+*.out
+*.bin
+*.elf
+*.c~
+*.jar
+*.bak
