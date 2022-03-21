@@ -5,11 +5,11 @@
  * TIA: 4199118-4
  * Nome:Gabriel Gutierrez Pereira
  * TIA: 31952682
- * compilador: gcc
  * Nome: Luana Brugnaro de Souza Braga
  * TIA: 31945325
  * Nome: Isabelle Ramos de Azevedo Ferreira
  * TIA: 4193066-5
+ * compilador: gcc
  * opções de compilação: -Wall -Wextra -Werror -pedantic -ansi
 */  
 
