@@ -29,7 +29,7 @@ typedef size_t usize;
 /*
  * @func: is_digit
  * @arg: um inteiro arg que representa uma letra 
- * @return: 1 se o número estiver entra '0' e '9', caso contrário 0
+ * @return: 1 se o número estiver entre '0' e '9', caso contrário 0
  * --- 
  * Checa se determinado argumento é um digito
 */ 
