@@ -66,6 +66,7 @@ int E(char palavra[],int *pos)
 	{
 		return 1;
 	}
+	fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 	return 0;
 }
 /*
@@ -77,6 +78,7 @@ int S(char palavra [],int *pos)
 	{
 		return 1;
 	}
+	fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 	return 0;
 }
 /*
@@ -91,7 +93,8 @@ int K(char palavra[],int *pos)
 		if(match(lookahead,palavra,pos) && T(palavra,pos) && K(palavra,pos))
 		{
 			return 1;
-		}
+			}
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
 	return 1; /* nullable */ 
@@ -105,6 +108,7 @@ int T(char palavra[],int *pos)
 	{
 		return 1;
 	}
+	fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 	return 0;
 }
 /*
@@ -120,6 +124,7 @@ int Z(char palavra[],int *pos)
 		{
 			return 1;
 		}
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
 	return 1;
@@ -138,6 +143,7 @@ int F(char palavra[],int *pos)
 		{
 			return 1;
 		}
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
 	else if(X(palavra,pos) || (match('-',palavra,pos) && X(palavra,pos)) )
@@ -146,6 +152,7 @@ int F(char palavra[],int *pos)
 	}
 	else
 	{
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
 }
@@ -160,8 +167,10 @@ int X(char palavra[],int *pos)
 		{
 			return 1;
 		}
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
+	fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 	return 0;
 }
 /*
@@ -176,8 +185,10 @@ int D(char palavra[],int *pos)
 		{
 			return 1;
 		}
+		fprintf(stderr,"Erro: %s\n",__FUNCTION__);
 		return 0;
 	}
+	
 	return 1; /* nullable */ 
 
 }
@@ -186,7 +197,7 @@ int D(char palavra[],int *pos)
 int main(void)
 {
 
-	char palavra[] = "((1*(5-3)/2+(1*(3/2))))$";
+	char palavra[] = "abc";
 	int pos = 0;
 	lookahead = palavra[pos];
 	if(E(palavra,&pos))
